@@ -34,10 +34,9 @@ body {
 }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   font-weight: bold;
-  font-variant: small-caps;
   text-align: left;
   padding: 10px;
   margin: 10px;
@@ -47,18 +46,12 @@ h1 {
 
 h2 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 27px;
+  font-size: 20px;
   font-weight: bold;
-  font-variant: small-caps;
   text-align: center;
+  color: rgb(12, 12, 248);;
 }
 
-#menuitem {
-  padding: 10px;
-  margin: 5px 50px;
-  display: inline;
-  position: relative;
-}
 
 p {
   font-size: 17px;
@@ -74,7 +67,7 @@ p#text {
 }
 
 a {
-  color: blue;
+  color: rgb(112, 112, 239);
 }
 
 a:visited {
@@ -82,7 +75,7 @@ a:visited {
 }
 
 a:hover {
-  color: blueviolet;
+  color: rgb(144, 198, 237);
   text-decoration: none;
 }
 
@@ -91,7 +84,7 @@ a:active {
 }
 
 input[type=submit] {
-  background: darkolivegreen;
+  background: rgb(144, 198, 237);
   padding: 5px 15px;
   border: 0 none;
   cursor: pointer;
@@ -99,7 +92,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  color: cadetblue;
+  color: rgb(144, 198, 237);
 }
 
 table {
@@ -117,7 +110,7 @@ table {
 
 #float-boxes div {
   font-family: Arial, Helvetica, sans-serif;
-  color: blueviolet;
+  color: rgb(112, 112, 239);
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   padding: 10px;
@@ -146,12 +139,13 @@ table {
   display: block;
 }
 
-.p1#project {
-  font-size: 17px;
+p {
+  font-size: 15px;
   font-style: normal;
   font-family: Arial, Helvetica, sans-serif;
   width: 150px;
-  text-align: left;
+  text-align: center;
+  color: rgb(112, 112, 239);
 }
 
 #text {
@@ -203,12 +197,12 @@ div.grid__item {
   border: none;
   float: center;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: darkolivegreen;
-  color: white;
+  background-color: rgb(144, 198, 237);
+  color: chocolate;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgb(12, 12, 248);
   -webkit-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
@@ -316,7 +310,7 @@ footer {
 
 .heading {
   font-size: 25px;
-  color: chocolate;
+  color: rgb(112, 112, 239)
 }
 
 .home-main {
@@ -333,4 +327,32 @@ footer {
 /* For all clickable elements */
 a:active, button:active, [role="button"]:active {
   cursor: grabbing; /* Changes to a closed hand icon when clicking */
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px; /* Adjust this value to move the menu down */
+}
+
+#menuitem a {
+  margin: 0 15px; /* Adjust this value to increase/decrease space between items */
+  color: chocolate; /* Adjust color as needed */
+  font-size: 20px; /* Adjust font size as needed */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  text-decoration: none;
+}
+
+#menuitem a:hover,
+#menuitem a:focus {
+  color: rgb(144, 198, 237); /* Change this to your preferred hover color */
+}
+
+#menuitem a:active {
+  color: rgb(144, 198, 237); /* Change this to your preferred click color */
+}
+
+#menuitem a.active {
+  color: rgb(144, 198, 237); /* Color for the currently active page */
 }
