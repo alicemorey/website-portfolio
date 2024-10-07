@@ -1,0 +1,250 @@
+$default-color:  rgb(191, 222, 228);
+$text-color:  rgb(255, 157, 0);
+$border-color: 5px solid pink;
+$button-background-color: lightgray;
+$button-border-color: 2px solid purple;
+$default-text: 'Montserrat', sans-serif;
+
+header {
+  padding: 15px;
+  margin: 15px 10px 1px 1px;
+  width: 80;
+  box-sizing: border-box;
+  display: block;
+}
+
+main {
+  padding: 5px 100px;
+  margin: 150px;
+  width: 50%;
+  height: 70%;
+  box-sizing: border-box;
+  text-align: right;
+    body {
+    background-color: $default-color;
+    color: $text-color;
+    font-family: $default-text;
+    font-weight: bold;}
+    h1 {
+    font-family: $default-text;
+    font-size: 27px;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+    border: $border-color;
+    display: inline-block;
+    h2 {
+    font-family: $default-text;
+    font-size: 27px;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+      .img {
+      display: inline-block;
+      position: relative;
+      box-sizing: border-box;
+      }
+      p {
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 500;
+        display: block;
+        p#text {
+        align-self: center;
+      }
+      }
+    }
+  }
+}
+
+#menuitem {
+  padding: 10px;
+  margin: 5px 50px;
+  display: inline;
+  position: relative;
+  a {
+  color: blue;
+  a:visited {
+  color: coral;
+  a:hover {
+  color: blueviolet;
+  text-decoration: none;
+  a:active {
+  color: chartreuse;
+}
+  }
+}
+  }
+}
+
+input[type=submit] {
+  background: darkolivegreen;
+  padding: 5px 15px;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  input[type=submit]:hover {
+  color: cadetblue;
+}
+}
+
+table {
+  padding: 10px;
+  margin: 10px;
+  border: $border-color;
+}
+
+#float-boxes div {
+  font-family: $default-text;
+  box-sizing: content-box;
+  padding: 10px;
+  margin: 10px;
+  border: $border-color;
+  display: inline-block;
+  #float-text {
+  display: inline;
+  text-align: center; 
+  #artwork {
+  width: 100px;
+  height: 150px;
+  border: $border-color;
+  border-radius: 20%;
+}
+  }
+}
+
+.standard-label {
+  width: 10px;
+  height: 5px;
+  padding: 5px;
+  display: block;
+}
+
+#text {
+  text-align: left;
+}
+
+#contact-email {
+  width: 150px;
+  height: 21px;
+  display: block;
+  float: right;
+}
+
+#contact-message {
+  width: 150px;
+  height: 40px;
+  display: block;
+  float: right;
+}
+
+input {
+  display: block;
+  float: left;
+}
+
+#portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 20%;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  div.grid__item {
+  background-color: lightgray;
+  border: 2px solid purple;
+  width: 300px;
+  height: 350px;
+  border-radius: 20%;
+  transition-property: background-color, transform;
+  transition-duration: 0.5s, 0.5s;
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  .p1#project {
+  font-size: 17px;
+  font-style: normal;
+  font-family: $default-text;
+  width: 150px;
+  text-align: left;
+  }
+}
+}
+
+
+.button,
+button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: $button-background-color;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s;
+}
+
+@media all and (max-width: 575px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 575px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (min-width: 750px) and(max-width: 880px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+}
+
+@media all and (min-width: 880px) and (max-width: 1250px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+}
+
+h1 {
+  font-size: 22px;
+}
+
+footer {
+  padding: 5%;
+  margin: 5px;
+  width: 400px;
+  border: 5px solid rgba(10, 71, 106, 0.337);
+  float: center;
+  text-align: left;
+  .page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  .page-footer {
+    display: inline;
+    float: center;
+  }
+}
+}
+
