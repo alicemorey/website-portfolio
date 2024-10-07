@@ -25,46 +25,37 @@
             </div>
         </header>
 
-    <main>
-        alice morey<br>
-        weserstr. 53<br>
-        12045 Berlin<br>
-        deutschland<br>
-    <br>
-       <a href="tel:+49 157 52707455">tel: +49 157 52707455</a>
-    <br>
-        <a href="mailto: a.m.morey@live.com">email: info@alicemorey.com
-        </a>
-        <br>
-        <br>
-        <br>
-        <form action="subscribe" method="post" id="contact-form">
-            <label class="standard-label" for="text">Name:</label>
+        <main>
+        <div class="contact-container">
+            <h2 class="heading">Contact Information</h2>
+            <a href="+49 157 52707455">Mobile: +49 157 52707455</a>
             <br>
-            <input type="text" id="text"required>
-            <br>
-            <label class="standard-label" id="contact-email">E-mail:</label>
-            <br>
-            <input type="text"  id="contact-email" required>
-            <br>
-            <label class="standard-label" id="contact-message">Message:</label>
-            <textarea type="text" id="contact-message" length=250 required></textarea>
-            <br>
-            <input class=button type="submit" value="send message">
-        </form>
-    </main>
+            <a href="mailto:info@alicemorey.com">Email: info@alicemorey.com</a>
+        </div>
+            <form action="subscribe" method="post" id="contact-form">
+                <label 
+                class="standard-label" for="contact-name">Name:</label>
+                <input type="text" id="contact-name" required>
+               
+                <label class="standard-label" for="contact-email">E-mail:</label>
+                <input type="email" id="contact-email" required>
+                
+                <label class="standard-label" for="contact-message">Message:</label>
+                <textarea id="contact-message" maxlength="250" required></textarea>
+            
+                <input class="button" type="submit" value="Send Message">
+            </form>
+           
+        </main>
 
-<footer class="page-footer">
-
-    <p>find me on
-    </p>
-    <div class="page-footer">
-        <a target="_blank" href=https://github.com><img src="./img/github.png" width="16" height="16" alt="github" /></a>
-        <a target= "_blank" href=https://twitter.com><img src="./img/twitter.png" width="16" height="16" alt="Twitter"/><a>
-        <a target= "_blank" href="https://www.linkedin.com/"><img src="./img/linkedin.png" width="16" height="16" alt="LinkedIn">     
+    <footer class="page-footer">
+    <div>
+        <p>find me on</p>
+        <a target="_blank" href="https://github.com/alicemorey"><img src="./img/github.png" width="16" height="16" alt="github" /></a>
+        <a target= "_blank" href="https://twitter.com"><img src="./img/twitter.png" width="16" height="16" alt="Twitter"/><a>
+        <a target= "_blank" href="https://www.linkedin.com/in/alice-morey-0260b226/"><img src="./img/linkedin.png" width="16" height="16" alt="LinkedIn">     
     </div>
 </footer>
 
 <script src="js/tota11y.min.js"></script>
-
     </body>
