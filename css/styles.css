@@ -2,7 +2,7 @@
   --primary-color: #bfdee4;
   --secondary-color: #ff9d00;
   --marginlength: 200px;
-  --primary-font: "Montserrat", sans-serif;
+  --primary-font: Arial, Helvetica, sans-serif;
   --primary-font-size: 50px;
   --secondary-font-size: 17px;
   --font-weight: bold;
@@ -277,4 +277,11 @@ footer {
 #contact-form {
   display: inline-block;
   text-align: left;
+}
+
+.grid-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 300px; /* Adjust this value as needed */
 }

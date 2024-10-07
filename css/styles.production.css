@@ -25,12 +25,12 @@ main {
 }
 
 body {
-  background-color: #bfdee4;
-  color: #ff9d00;
-  font-family: "Montserrat", sans-serif;
+  background-color: #9fcbfa;
+  color: chocolate;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  background-image: url("rippes_backgroud_alicemorey.jpg");
   background-size: cover;
+  cursor: crosshair;
 }
 
 h1 {
@@ -46,7 +46,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 27px;
   font-weight: bold;
   font-variant: small-caps;
@@ -116,7 +116,7 @@ table {
 }
 
 #float-boxes div {
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: blueviolet;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -149,7 +149,7 @@ table {
 .p1#project {
   font-size: 17px;
   font-style: normal;
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   width: 150px;
   text-align: left;
 }
@@ -184,8 +184,8 @@ input {
 }
 
 div.grid__item {
-  background-color: lightgray;
-  border: 2px solid purple;
+  background-color: rgb(198, 232, 250);
+  border: 2px solid rgb(12, 12, 248);
   width: 300px;
   height: 350px;
   border-radius: 20%;
@@ -202,7 +202,7 @@ div.grid__item {
 .button {
   border: none;
   float: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: darkolivegreen;
   color: white;
   text-decoration: none;
@@ -217,7 +217,7 @@ div.grid__item {
 button {
   border: none;
   float: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: darkolivegreen;
   color: white;
   text-decoration: none;
@@ -265,7 +265,9 @@ button {
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 55px;
+  font-weight: bold;
+  float: center;
 }
 
 footer {
@@ -299,4 +301,36 @@ footer {
 .standard-label {
   display: block;
   text-align: left;
+}
+
+.grid-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: none; /* Adjust this value as needed */
+}
+
+.grid__item {
+  overflow: hidden;
+}
+
+.heading {
+  font-size: 25px;
+  color: chocolate;
+}
+
+.home-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-main h1 {
+  text-align: center;
+}
+
+/* For all clickable elements */
+a:active, button:active, [role="button"]:active {
+  cursor: grabbing; /* Changes to a closed hand icon when clicking */
 }
