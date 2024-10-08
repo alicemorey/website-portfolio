@@ -354,6 +354,29 @@ h1 {
   max-height: none; /* Adjust this value as needed */
 }
 
+.image-grid {
+  width: 350px;
+  grid-template-columns: 1fr 1fr;
+  height: 175px;
+  object-fit: fill;
+  max-height: none; /* Adjust this value as needed */
+}
+
+.image-grid-1 {
+  width: 175px;
+  grid-template-columns: 1fr 1fr;
+  height: 350px;
+  object-fit: fill;
+  max-height: none; /* Adjust this value as needed */
+}
+
+.website-image {
+  width: 800px;
+  padding-left: 35%;
+  text-align: center;
+
+}
+
 .grid-text {
   font-size: 15px;
   font-style: normal;
@@ -415,3 +438,15 @@ a:active, button:active, [role="button"]:active {
 #menuitem a.active {
   color: rgb(144, 198, 237); /* Color for the currently active page */
 }
+
+.project-link {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+
