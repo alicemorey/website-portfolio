@@ -15,12 +15,14 @@ header {
 }
 
 main {
+  flex: 1;
   padding: 5px;
-  margin: 50px auto;
+  margin: 20px 20px;
   width: 90%;
   height: 70%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding-left: 80px;
 }
 
 body {
@@ -30,6 +32,9 @@ body {
   font-weight: bold;
   background-size: cover;
   cursor: crosshair;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1 {
@@ -108,30 +113,6 @@ table {
   box-sizing: border-box;
 }
 
-#float-boxes div {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(112, 112, 239);
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  padding: 10px;
-  margin: 10px;
-  border: undefined;
-  display: inline-block;
-}
-
-#float-text {
-  display: block;
-  text-align: left;
-  font-size: 17px;
-}
-
-#artwork {
-  width: 100px;
-  height: 150px;
-  border: undefined;
-  border-radius: 20%;
-}
-
 .about {
   display: inline-block;
   font-size: 17px;
@@ -190,20 +171,21 @@ input {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  grid-gap: 30px;
   justify-content: center;
 }
 
-.grid__item {
+.grid_item {
   background-color: rgb(198, 232, 250);
   border: 2px solid rgb(64, 64, 154);
-  width: 300px;
+  width: 250px;
   height: 350px;
   border-radius: 20%;
-  padding: 20px;
+  padding: 40px;
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .button {
@@ -238,7 +220,18 @@ button {
 
 .button-container {
   text-align: center;
-  margin-top: 20px;
+  margin-top: auto;
+  padding-right: 100px;
+  position: bottom;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
   padding-right: 100px;
 }
 
@@ -357,8 +350,10 @@ button {
 }
 
 .image-grid {
+  display: grid;
   width: 350px;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
   height: 175px;
   object-fit: fill;
   max-height: none; /* Adjust this value as needed */
@@ -366,16 +361,29 @@ button {
 
 .image-grid-1 {
   width: 175px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
   height: 350px;
   object-fit: fill;
   max-height: none; /* Adjust this value as needed */
 }
 
-.website-image {
-  padding-left: 35%;
-  text-align: center;
+.image-grid-item {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
+.image-grid-text {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+  color: rgb(64, 64, 154);
+}
+
+.website-image {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .grid-text {
@@ -387,8 +395,12 @@ button {
   color: rgb(64, 64, 154);
 }
 
+div {
+  align-items: center;
+}
+
 .grid__item {
-  overflow: hidden;
+  
 }
 
 .heading {
