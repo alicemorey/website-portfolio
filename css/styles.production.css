@@ -26,6 +26,25 @@ main {
   text-align: center;
 }
 
+/* For divs inside the main section */
+main div {
+  width: 100%; /* Make sure div takes up the full width */
+  max-width: 100%; /* Prevent any overflow */
+  padding: 10px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in the div's total width */
+}
+
+/* For paragraphs inside the main section */
+main p {
+  font-size: 1rem; /* Use a base font size */
+  line-height: 1.5; /* Ensure good readability */
+  padding: 10px; /* Space inside paragraphs */
+  margin: 0 0 10px 0; /* Add space between paragraphs */
+  width: 100%; /* Make sure paragraphs fit within the div */
+  word-wrap: break-word; /* Ensure long words don't overflow */
+}
+
+
 body {
   background-color: #9fcbfa;
   color: chocolate;
@@ -251,6 +270,27 @@ button {
   }
 }
 
+@media all and (max-width: 575px) {
+  .grid {
+    grid-template-columns: 1fr; /* Single column */
+    grid-gap: 5px; /* Smaller gap between items */
+    padding: 10px; /* Ensure padding around the grid */
+  }
+
+  /* Responsive div */
+  main div {
+    padding: 5px; /* Reduce padding to save space */
+    width: 100%; /* Ensure the div takes up the full width */
+  }
+
+  /* Responsive p */
+  main p {
+    font-size: 0.9rem; /* Slightly smaller font size for small screens */
+    padding: 5px; /* Reduce padding */
+    margin: 5px 0; /* Reduce margins between paragraphs */
+  }
+}
+
 @media all and (min-width: 575px) and (max-width: 750px) {
   .grid {
     grid-template-columns: repeat (2, 1fr);
@@ -473,7 +513,6 @@ a:active, button:active, [role="button"]:active {
 .project-link {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .links-container {
   display: flex;
