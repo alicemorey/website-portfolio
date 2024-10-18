@@ -205,36 +205,6 @@ input {
   overflow: hidden;
 }
 
-.button {
-  border: none;
-  float: center;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(144, 198, 237);
-  color: chocolate;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgb(12, 12, 248);
-  -webkit-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-}
-
-button {
-  border: none;
-  float: center;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: darkolivegreen;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-}
-
 .button-container {
   text-align: center;
   margin-top: auto;
