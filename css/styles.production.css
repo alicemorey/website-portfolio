@@ -402,19 +402,14 @@ div {
   padding: 0;
 }
 
-.home-main h1 {
+.home-main h1 a {
   text-decoration: none;
   text-align: center;
-}
-
-.home-main h1 {
   color: chocolate;
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.home-main h1:hover {
-  text-decoration: none;
+.home-main h1 a:hover {
   color: rgb(128, 240, 106);
 }
 
