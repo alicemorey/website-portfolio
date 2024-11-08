@@ -44,10 +44,9 @@ main p {
   word-wrap: break-word; /* Ensure long words don't overflow */
 }
 
-
 body {
-  background-color: #9fcbfa;
-  color: chocolate;
+  background-color: #89abe3;
+  color: #ea738d;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   background-size: cover;
@@ -73,7 +72,7 @@ h2 {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  color: rgb(64, 64, 154);
+  color: #89abe3;
 }
 
 p {
@@ -81,7 +80,7 @@ p {
   font-style: italic;
   font-weight: 500;
   display: block;
-  color: rgb(64, 64, 154);
+  color: #89abe3;
   text-align: center;
 }
 
@@ -96,7 +95,7 @@ a {
 }
 
 a:visited {
-  color: coral;
+  color: #ea738d;
 }
 
 a:hover {
@@ -109,7 +108,7 @@ a:active {
 }
 
 input[type=submit] {
-  background: rgb(144, 198, 237);
+  background: #89abe3;
   padding: 5px 15px;
   border: 0 none;
   cursor: pointer;
@@ -140,7 +139,7 @@ table {
   font-family: Arial, Helvetica, sans-serif;
   width: 600px;
   text-align: left;
-  color: rgb(64, 64, 154);
+  color: #1e2761;
 }
 
 ul.about {
@@ -165,7 +164,7 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   width: 150px;
   text-align: center;
-  color: rgb(112, 112, 239);
+  color: #ea738d;
 }
 
 #text {
@@ -178,6 +177,13 @@ input {
 }
 
 #portrait {
+  float: center;
+  width: 275px;
+  margin-right: 0px;
+  border-radius: 10%;
+}
+
+#alicemoreypainting {
   float: center;
   width: 275px;
   margin-right: 0px;
@@ -306,7 +312,7 @@ input {
   display: inline-block;
   margin-left: 10px;
   vertical-align: middle;
-  color: rgb(64, 64, 154);
+  color: #ea738d;
 }
 
 .social-media {
@@ -359,7 +365,7 @@ input {
   text-align: center;
   padding: 20px;
   font-size: 15px;
-  color: rgb(64, 64, 154);
+  color: #ea738d;
 }
 
 .website-image {
@@ -385,12 +391,12 @@ div {
 
 .heading {
   font-size: 25px;
-  color: rgb(64, 64, 154);
+  color: #ea738d;
 }
 
 .text {
   font-size: 15px;
-  color: rgb(64, 64, 154);
+  color: #ea738d;
   text-align: center;
 }
 
@@ -405,7 +411,7 @@ div {
 .home-main h1 {
   text-decoration: none;
   text-align: center;
-  color: chocolate;
+  color: #ea738d;
   transition: color 0.3s ease;
 }
 
@@ -428,7 +434,7 @@ a:active, button:active, [role="button"]:active {
 
 #menuitem a {
   margin: 0 15px; /* Adjust this value to increase/decrease space between items */
-  color: chocolate; /* Adjust color as needed */
+  color: #ea738d; /* Adjust color as needed */
   font-size: 20px; /* Adjust font size as needed */
   transition: color 0.3s ease; /* Smooth transition for color change */
   text-decoration: none;
