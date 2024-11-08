@@ -1,5 +1,5 @@
 /*
-* Prefixed by https://autoprefixer.github.io
+* refixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
@@ -164,7 +164,7 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   width: 150px;
   text-align: center;
-  color: #ea738d;
+  color: #1e2761;
 }
 
 #text {
@@ -178,9 +178,10 @@ input {
 
 #portrait {
   float: center;
-  width: 275px;
+  width: 150px;
+  height: 150px;
   margin-right: 0px;
-  border-radius: 10%;
+  border-radius: 50%;
 }
 
 #alicemoreypainting {
@@ -204,11 +205,17 @@ input {
 }
 
 .grid_item {
-  width: 100%;
-  height: 350px;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  border-radius: 50%;
+  background-color: orange;
+}
+
+.grid_item2 {
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  background-color: rgb(44, 7, 232);
 }
 
 .button-container {
@@ -329,11 +336,9 @@ input {
 }
 
 .grid-image {
-  height: auto;
-  max-width: 100%;
-  object-fit: cover;
   margin-bottom: 10px;
   max-height: fit-content; /* Adjust this value as needed */
+  border-radius: 50%;
 }
 
 .image-grid {
@@ -394,6 +399,11 @@ div {
   color: #ea738d;
 }
 
+.heading2 {
+  font-size: 15px;
+  color: #1e2761;
+}
+
 .text {
   font-size: 15px;
   color: #ea738d;
@@ -425,11 +435,28 @@ a:active, button:active, [role="button"]:active {
 }
 
 .menu-container {
-  display: flex;
+ /* display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 25px; /* Adjust this value to move the menu down */
+  padding-top: 25px; /* Adjust this value to move the menu down 
   padding-left: 100px;
+  box-shadow: 4px 4px 8px rgba(253, 67, 222, 0.953); */
+  font-family: 'roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 4px 4px 8px rgba(253, 67, 222, 0.953);
+  z-index: 1000;
 }
 
 #menuitem a {
@@ -453,10 +480,6 @@ a:active, button:active, [role="button"]:active {
   color: rgb(144, 198, 237); /* Color for the currently active page */
 }
 
-.project-link {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 .links-container {
   display: flex;
   justify-content: center;
@@ -465,16 +488,63 @@ a:active, button:active, [role="button"]:active {
 }
 
 .project-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: rgb(144, 198, 237);
-  color: chocolate;
   text-decoration: none;
-  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .project-link:hover {
   background-color: rgb(112, 112, 239);
   color: white;
+}
+
+.dot-text::before {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background-color: orange;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.dot-dot::before {
+  content: "";
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  background-color: orange;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.dot-pot::before {
+  content: "";
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  background-color: rgb(44, 7, 232);
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 18px;
+  color: #ea738d;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.line {
+  width: 100%;                /* Full width */
+  height: 2px;                /* Line thickness (adjustable) */
+  background-color: rgb(245, 242, 151);    /* Line color */
+}
+
+.travel::before {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(228, 227, 232);
+  border-radius: 50%;
+  margin-right: 5px;
 }
