@@ -485,6 +485,7 @@ div {
 .heading {
   font-size: 25px;
   color: #ea738d;
+  padding-top: 50px;
 }
 
 .heading2 {
@@ -619,7 +620,7 @@ a:active, button:active, [role="button"]:active {
   font-style: italic;
   font-size: 18px;
   color: #ea738d;
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
 }
 
