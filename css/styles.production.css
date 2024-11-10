@@ -303,6 +303,7 @@ input {
   overflow: hidden;
   position: relative;
   transition: transform 0.3s;
+  color: #ea738d;
 }
 
 /* Image styling */
