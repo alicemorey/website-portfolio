@@ -369,12 +369,28 @@ input {
     font-size: 14px;
   }
 
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
   .menu-container {
     flex-direction: column;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .dot-dot-blue,
+  .dot-pot-blue {
+    width: 12px; /* Smaller dots on mobile */
+    height: 12px;
+    margin: 0 5px; /* Reduced space between dots */
   }
 
   .button-container {
@@ -384,33 +400,35 @@ input {
 
 @media all and (max-width: 575px) {
   .grid {
-    grid-template-columns: 1fr; /* Single column */
+    grid-template-columns: 1fr 1fr; /* Single column */
     grid-gap: 5px; /* Smaller gap between items */
     padding: 10px; /* Ensure padding around the grid */
   }
 
   /* Responsive div */
-  main div {
+  main div,
+  .about {
     padding: 5px; /* Reduce padding to save space */
     width: 100%; /* Ensure the div takes up the full width */
   }
 
   /* Responsive p */
-  main p {
+  main p,
+  .about {
     font-size: 0.9rem; /* Slightly smaller font size for small screens */
     padding: 5px; /* Reduce padding */
     margin: 5px 0; /* Reduce margins between paragraphs */
+  }
+
+  #portrait {
+    width: 100px; /* Smaller image on mobile */
+    height: auto;
   }
 }
 
 @media all and (min-width: 575px) and (max-width: 750px) {
   .grid {
     grid-template-columns: repeat (2, 1fr);
-  }
-
-  .home-main {
-    height: 100vh;
-    padding: 0;
   }
 }
 
@@ -596,7 +614,7 @@ a:active, button:active, [role="button"]:active {
   margin-right: 5px;
 }
 
-.dot-dot::before {
+.dot-dot-blue::before {
   content: "";
   display: inline-block;
   height: 150px;
@@ -606,7 +624,7 @@ a:active, button:active, [role="button"]:active {
   margin-right: 5px;
 }
 
-.dot-pot::before {
+.dot-pot-blue::before {
   content: "";
   display: inline-block;
   height: 150px;
