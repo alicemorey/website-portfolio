@@ -196,26 +196,154 @@ input {
   margin: 0 auto;
 }
 
+/* Grid container */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-  justify-content: center;
-  flex-direction: row;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between circles */
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
 }
 
-.grid_item {
+/* Circle styling */
+.circle {
+  display: flex;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #1e2761;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.circle:hover {
+  transform: scale(1.05);
+}
+
+/* Image styling inside the circle */
+.circle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the circle */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Text inside the circle - hidden by default */
+.circle p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ea738d; /* Text color */
+  opacity: 0; /* Hide text initially */
+  transition: opacity 0.3s ease;
+  background-color: #1e2761;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+/* Show text and hide image on hover */
+.circle:hover .circle-image {
+  opacity: 0; /* Fade out image on hover */
+}
+
+.circle:hover p {
+  opacity: 1; /* Fade in text on hover */
+}
+
+/* Hover effect to hide <h2> and show <p> */
+.circle:hover h2 {
+  opacity: 0; /* Fade out <h2> on hover */
+}
+
+/* Container for circles */
+.facts-grid {
+  display: flex; /* Arranges items in a row */
+  gap: 20px; /* Space between circles */
+  justify-content: center; /* Centers the circles horizontally */
+  align-items: center; /* Aligns the circles vertically */
+  flex-wrap: wrap; /* Wraps circles onto a new line if they don’t fit */
+  padding: 20px;
+}
+
+.circle-container {
+  display: flex; /* Arrange items in a row */
+  flex-wrap: wrap; /* Wrap circles onto the next line if needed */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Space between circles */
+  padding: 20px;
+}
+
+.circle2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: orange;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s;
 }
 
-.grid_item2 {
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Image styling */
+.grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes the image fit within the circle */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3; /* Slight transparency for better text visibility */
+}
+
+/* Text inside the circle */
+.circle p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  color: #ea738d; /* Text color */
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.3s ease;
+  background-color: rgba(30, 39, 97, 0.8); /* Optional background for readability */
+  padding: 15px;
   border-radius: 50%;
-  background-color: rgb(44, 7, 232);
+  text-align: center;
+  z-index: 2;
+}
+
+.circle h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: bold;
+  color: orange;
+  opacity: 1; /* Visible initially */
+  transition: opacity 0.3s ease;
+  z-index: 2; /* Keep it above the image */
 }
 
 .button-container {
@@ -335,59 +463,18 @@ input {
   padding-left: 15px;
 }
 
-.grid-image {
-  margin-bottom: 10px;
-  max-height: fit-content; /* Adjust this value as needed */
-  border-radius: 50%;
-}
-
-.image-grid {
+.website-image {
   display: grid;
-  width: 350px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  height: 175px;
-  object-fit: fill;
-  max-height: none; /* Adjust this value as needed */
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Space between images */
+  padding: 20px;
 }
 
-.image-grid-1 {
-  width: 175px;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
-  height: 350px;
-  object-fit: fill;
-  max-height: none; /* Adjust this value as needed */
-}
-
-.image-grid-item {
+.website-image .image {
   width: 100%;
   height: auto;
-  object-fit: cover;
-}
-
-.image-grid-text {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 20px;
-  font-size: 15px;
-  color: #ea738d;
-}
-
-.website-image {
-  max-width: 350px;
-  margin: 0 auto;
-  padding-left: 25px;
-  padding-top: 20px;
-  position: relative;
-}
-
-.grid-text {
-  font-size: 15px;
-  font-style: normal;
-  font-family: Arial, Helvetica, sans-serif;
-  width: fit-content;
-  text-align: center;
-  color: rgb(64, 64, 154);
+  border-radius: 8px; /* Optional: adds rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
 }
 
 div {
@@ -522,7 +609,7 @@ a:active, button:active, [role="button"]:active {
   display: inline-block;
   height: 150px;
   width: 150px;
-  background-color: rgb(44, 7, 232);
+  background-color: #1e2761;
   border-radius: 50%;
   margin-right: 5px;
 }
@@ -536,9 +623,8 @@ a:active, button:active, [role="button"]:active {
 }
 
 .line {
-  width: 100%;                /* Full width */
-  height: 2px;                /* Line thickness (adjustable) */
-  background-color: rgb(245, 242, 151);    /* Line color */
+  width: 100%;
+  border-top: 0.10px solid rgb(245, 242, 151); /* Thinner line using border */
 }
 
 .travel::before {
