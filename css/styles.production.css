@@ -22,7 +22,6 @@ main {
   height: 70%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding-left: 80px;
   text-align: center;
 }
 
@@ -202,8 +201,8 @@ input {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
   gap: 20px; /* Space between circles */
   max-width: 1000px;
-  margin: 20px auto;
-  padding: 20px;
+  justify-items: center;
+  align-items: center;
 }
 
 /* Circle styling */
@@ -287,7 +286,7 @@ input {
   flex-wrap: wrap; /* Wrap circles onto the next line if needed */
   justify-content: center; /* Center items horizontally */
   gap: 20px; /* Space between circles */
-  padding: 50px;
+  padding: 20px;
 }
 
 .circle2 {
@@ -315,6 +314,30 @@ input {
   top: 0;
   left: 0;
   opacity: 0.3; /* Slight transparency for better text visibility */
+}
+
+/*image popping out*/
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.image:hover {
+  cursor: grabbing;
 }
 
 /* Text inside the circle */
@@ -382,13 +405,27 @@ input {
 @media (max-width: 575px) {
   body {
     font-size: 14px;
+    justify-content: center; /* Center-align elements horizontally */
+    align-items: center;
+  }
+
+  .main {
+    justify-content: center; /* Center-align elements horizontally */
+    align-items: center;
+  }
+
+  .quote {
+    font-size: 1rem !important; /* Adjust as needed; use !important temporarily */
+    text-align: center !important;
+    margin-top: 30px !important;
+    padding: 10px;
   }
 
   .grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 5px;
-    padding: 10px;
+    padding: 20px;
   }
 
   .website-image,
@@ -408,16 +445,19 @@ input {
   }
 
   .menu-container {
-    flex-direction: column;
-    align-items: center;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
   }
 
   .circle {
     width: 150px;
     height: 150px;
+  }
+
+  .circle-container {
+    padding: 50px;
   }
 
   .dot-dot-blue,
@@ -524,6 +564,10 @@ input {
   margin: 0 5px;
 }
 
+.social-icons {
+  margin: 10px;
+}
+
 .contact-container {
   margin: 0 auto;
   text-align: center;
@@ -539,7 +583,7 @@ div {
 .heading {
   font-size: 25px;
   color: #ea738d;
-  padding-top: 50px;
+  margin-top: 40px;
 }
 
 .heading2 {
@@ -547,10 +591,18 @@ div {
   color: #1e2761;
 }
 
+.heading3 {
+  font-size: 40px;
+  color: #ea738d;
+  margin-top: 40px;
+}
+
 .text {
   font-size: 15px;
   color: #ea738d;
   text-align: center;
+  padding-bottom: 5px;
+  padding-top: 1px;
 }
 
 .home-main {
@@ -585,7 +637,7 @@ a:active, button:active, [role="button"]:active {
   padding-left: 100px;
   box-shadow: 4px 4px 8px rgba(253, 67, 222, 0.953); */
   font-family: 'roboto', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   color: black;
   position: fixed;
@@ -596,8 +648,8 @@ a:active, button:active, [role="button"]:active {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
-  padding: 10px 0;
+  background-color: #1e2761;
+  padding: 10px;
   box-shadow: 4px 4px 8px rgba(253, 67, 222, 0.953);
   z-index: 1000;
 }
@@ -672,9 +724,9 @@ a:active, button:active, [role="button"]:active {
 
 .quote {
   font-style: italic;
-  font-size: 18px;
+  font-size: 1.3rem;
   color: #ea738d;
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
 }
 
