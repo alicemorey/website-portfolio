@@ -17,7 +17,6 @@ header {
 main {
   flex: 1;
   padding: 5px;
-  margin: 20px 20px;
   width: 90%;
   height: 70%;
   -webkit-box-sizing: border-box;
@@ -29,7 +28,7 @@ main {
 main div {
   width: 100%; /* Make sure div takes up the full width */
   max-width: 100%; /* Prevent any overflow */
-  padding: 10px; /* Add padding for spacing */
+  padding: 5px; /* Add padding for spacing */
   box-sizing: border-box; /* Include padding in the div's total width */
 }
 
@@ -44,8 +43,9 @@ main p {
 }
 
 body {
-  background-color: #89abe3;
+  background-color: #f5e6cc;
   color: #ea738d;
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   background-size: cover;
@@ -53,6 +53,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  align-items: center;
+  margin-top: 50px;
 }
 
 h1 {
@@ -80,8 +82,9 @@ p {
   font-weight: 500;
   display: block;
   color: #89abe3;
-  text-align: center;
+  text-align: left;
 }
+
 
 p#text {
   -ms-flex-item-align: center;
@@ -94,7 +97,7 @@ a {
 }
 
 a:visited {
-  color: #ea738d;
+  color: #1e2761;
 }
 
 a:hover {
@@ -132,22 +135,38 @@ table {
 }
 
 .about {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   font-size: 17px;
   font-style: normal;
   font-family: Arial, Helvetica, sans-serif;
-  width: 600px;
-  text-align: left;
   color: #1e2761;
+  margin: 20px;
 }
 
+/* Container for the 'about' list */
 ul.about {
-  text-align: left;
+  justify-content: left; /* Centers the list items horizontally */
   max-width: 800px;
-  margin: 0 auto;
-  padding-left: 0;
-  list-style-position: inside;
+  margin: 0 auto; /* Center the list on the page */
+  padding: 0;
+  /*list-style: none; /* Remove bullet points */
+  gap: 40px; /* Space between each list item */
+}
+
+/* Individual list items */
+.about li {
+  font-size: 17px;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e2761;
   font-weight: normal;
+  text-align: left; /* Center-align text within each list item */
+}
+
+/* Bold styling for the first two words */
+.about li::first-line {
+  font-weight: bold;
 }
 
 .about-container {
@@ -195,14 +214,68 @@ input {
   margin: 0 auto;
 }
 
-/* Grid container */
+/* Basic styling for sections */
+section {
+  margin-bottom: 2px; /* Space between sections */
+  text-align: center;
+  padding: 2px;
+}
+
+/* Centering and padding sections */
+section {
+  width: 100%;
+  max-width: 1200px; /* Optional max width */
+  padding: 2px 0;
+  text-align: center;
+}
+
+/* Style for lines */
+.line {
+  width: 100%;
+  border-top: 0.10px solid #a64ac9; /* Thinner line using border */
+
+}
+
+/* Grid container styling */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
-  gap: 20px; /* Space between circles */
-  max-width: 1000px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center; /* Center each grid item in the grid */
+  padding: 20px 0;
+}
+
+/* Individual grid item styling */
+.grid_item {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: left;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+/* Image styling */
+.grid_item .grid-image {
+  width: 300px; /* Responsive image */
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px #ffb48f;
+}
+
+/* Text under image */
+.grid_item .grid-text {
+  margin-top: 2px;
+  font-size: 1rem;
+  color: #1e2761; /* Optional: Adjust text color */
+}
+
+/* Center-align section headers */
+h2 {
+  font-size: 1.1rem;
+  color: #ffb48f;
+  margin-bottom: 10px;
 }
 
 /* Circle styling */
@@ -249,7 +322,7 @@ input {
   justify-content: center;
   text-align: center;
   font-size: 0.8rem;
-  color: #ea738d; /* Text color */
+  color: #1e2761; /* Text color */
   opacity: 0; /* Hide text initially */
   transition: opacity 0.3s ease;
   background-color: #1e2761;
@@ -296,24 +369,14 @@ input {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: orange;
+  background-color: #fccd04;
   text-align: center;
   text-decoration: none;
   overflow: hidden;
   position: relative;
   transition: transform 0.3s;
-  color: #ea738d;
-}
-
-/* Image styling */
-.grid-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Makes the image fit within the circle */
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.3; /* Slight transparency for better text visibility */
+  color: #1e2761;
+  font-size: 15px;
 }
 
 /*image popping out*/
@@ -343,15 +406,17 @@ input {
 /* Text inside the circle */
 .circle p {
   position: absolute;
+  width: 150px;
+  height: 65px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 0.8rem;
-  color: #ea738d; /* Text color */
+  color: #f5e6cc; /* Text color */
   opacity: 0; /* Hidden initially */
   transition: opacity 0.3s ease;
   background-color: rgba(30, 39, 97, 0.8); /* Optional background for readability */
-  padding: 15px;
+  padding: 20px;
   border-radius: 50%;
   text-align: center;
   z-index: 2;
@@ -364,7 +429,7 @@ input {
   transform: translate(-50%, -50%);
   font-size: 1rem;
   font-weight: bold;
-  color: orange;
+  color: #fccd04;
   opacity: 1; /* Visible initially */
   transition: opacity 0.3s ease;
   z-index: 2; /* Keep it above the image */
@@ -391,7 +456,7 @@ input {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Two equal columns */
   gap: 20px; /* Space between images */
-  padding: 20px;
+  padding: 40px;
 }
 
 .website-image .image,
@@ -399,7 +464,7 @@ input {
   width: 300px;
   height: auto;
   border-radius: 8px; /* Optional: adds rounded corners */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  box-shadow: 0 4px 8px #ffb48f; /* Optional: adds a subtle shadow */
 }
 
 @media (max-width: 575px) {
@@ -487,6 +552,16 @@ input {
   #portrait {
     width: 150px;
     height: auto;
+  }
+
+  .about {
+    display: block; /* Stacks items vertically */
+    text-align: left; /* Aligns items to the left */
+    padding: 0 20px;
+  }
+
+  .about li {
+    margin: 10px 0; /* Adds spacing between stacked items */
   }
 }
 
@@ -584,11 +659,12 @@ div {
   font-size: 25px;
   color: #ea738d;
   margin-top: 40px;
+  text-align: center;
 }
 
 .heading2 {
   font-size: 15px;
-  color: #1e2761;
+  color: #ea738d;
 }
 
 .heading3 {
@@ -611,17 +687,6 @@ div {
   align-items: center;
   height: 100vh;
   padding: 0;
-}
-
-.home-main h1 {
-  text-decoration: none;
-  text-align: center;
-  color: #ea738d;
-  transition: color 0.3s ease;
-}
-
-.home-main h1 a:hover {
-  color: rgb(128, 240, 106);
 }
 
 /* For all clickable elements */
@@ -648,15 +713,15 @@ a:active, button:active, [role="button"]:active {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #1e2761;
+  background-color: #a64ac9;
   padding: 10px;
-  box-shadow: 4px 4px 8px rgba(253, 67, 222, 0.953);
+  /*box-shadow: 4px 4px 8px rgba(253, 67, 222, 0.953);*/
   z-index: 1000;
 }
 
 #menuitem a {
   margin: 0 15px; /* Adjust this value to increase/decrease space between items */
-  color: #ea738d; /* Adjust color as needed */
+  color: #f5e6cc;/* Adjust color as needed */
   font-size: 20px; /* Adjust font size as needed */
   transition: color 0.3s ease; /* Smooth transition for color change */
   text-decoration: none;
@@ -688,7 +753,6 @@ a:active, button:active, [role="button"]:active {
 }
 
 .project-link:hover {
-  background-color: rgb(112, 112, 239);
   color: white;
 }
 
@@ -697,7 +761,7 @@ a:active, button:active, [role="button"]:active {
   display: inline-block;
   height: 10px;
   width: 10px;
-  background-color: orange;
+  background-color: #fccd04;
   border-radius: 50%;
   margin-right: 5px;
 }
@@ -707,7 +771,7 @@ a:active, button:active, [role="button"]:active {
   display: inline-block;
   height: 150px;
   width: 150px;
-  background-color: orange;
+  background-color: #fccd04;
   border-radius: 50%;
   margin-right: 5px;
 }
@@ -728,11 +792,6 @@ a:active, button:active, [role="button"]:active {
   color: #ea738d;
   margin-top: 10px;
   text-align: center;
-}
-
-.line {
-  width: 100%;
-  border-top: 0.10px solid rgb(245, 242, 151); /* Thinner line using border */
 }
 
 .travel::before {
